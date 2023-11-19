@@ -1,6 +1,10 @@
 import express, { Request, Response } from 'express';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
+import { AppDataSource } from './infrastructure/config/dataSource';
+import { Express } from 'express-serve-static-core';
+import { env } from './infrastructure/config/config';
+import logger from './infrastructure/logger/logger';
 
 AppDataSource.initialize().then(() => {
     const app = express();
@@ -16,8 +20,6 @@ AppDataSource.initialize().then(() => {
     app.get('/', (req: Request, res: Response) => {
         res.send('Servidor Up');
     });
-
-    routes(app);
 
     app.listen(PORT, () => {
         console.log(`Servidor ejecutándose en http://localhost:${PORT}`);
