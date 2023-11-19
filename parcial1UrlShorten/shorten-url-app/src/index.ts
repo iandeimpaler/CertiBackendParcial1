@@ -1,6 +1,8 @@
 import express, { Request, Response } from 'express';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
+import { env } from './infrastructure/config/config';
+import { AppDataSource } from "./infrastructure/config/dataSource";
 
 AppDataSource.initialize().then(() => {
     const app = express();
