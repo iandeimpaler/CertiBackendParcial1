@@ -5,6 +5,7 @@ import { AppDataSource } from './infrastructure/config/dataSource';
 import { Express } from 'express-serve-static-core';
 import { env } from './infrastructure/config/config';
 import logger from './infrastructure/logger/logger';
+import { apiRoutes } from './api/controllers/apiRoutes';
 
 AppDataSource.initialize().then(() => {
     const app = express();
@@ -20,6 +21,14 @@ AppDataSource.initialize().then(() => {
     app.get('/', (req: Request, res: Response) => {
         res.send('Servidor Up');
     });
+
+    app.use('/api', apiRoutes());
+
+    app.use(
+        morgan("combined", {
+          stream: { write: (message: string) => logger.info(message.trim()) },
+        })
+      );
 
     app.listen(PORT, () => {
         console.log(`Servidor ejecutándose en http://localhost:${PORT}`);

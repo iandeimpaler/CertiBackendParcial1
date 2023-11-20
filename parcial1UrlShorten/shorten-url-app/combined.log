@@ -1,0 +1,21 @@
+info: Dentro de create user controller {"timestamp":"19/Nov/2023:21:45:34 -0400"}
+info: En create user repository {"timestamp":"19/Nov/2023:21:45:34 -0400"}
+error: Error al crear usuario: EntityMetadataNotFoundError: No metadata for "UserEntity" was found. {"email":"juan3@gmail.com","password":"juan","timestamp":"19/Nov/2023:21:45:34 -0400"}
+info: ::1 - - [20/Nov/2023:01:45:34 +0000] "POST /api/users/ HTTP/1.1" 500 55 "-" "PostmanRuntime/7.35.0" {"timestamp":"19/Nov/2023:21:45:34 -0400"}
+info: Dentro de create user controller {"timestamp":"19/Nov/2023:21:46:28 -0400"}
+info: En create user repository {"timestamp":"19/Nov/2023:21:46:28 -0400"}
+info: ::1 - - [20/Nov/2023:01:46:28 +0000] "POST /api/users/ HTTP/1.1" 201 106 "-" "PostmanRuntime/7.35.0" {"timestamp":"19/Nov/2023:21:46:28 -0400"}
+info: Dentro de update user controller {"timestamp":"19/Nov/2023:21:47:23 -0400"}
+info: En update user service {"timestamp":"19/Nov/2023:21:47:23 -0400"}
+info: En find by id user repository {"timestamp":"19/Nov/2023:21:47:23 -0400"}
+info: En update user repository {"timestamp":"19/Nov/2023:21:47:23 -0400"}
+info: ::1 - - [20/Nov/2023:01:47:23 +0000] "PUT /api/users/80376b32-1119-4a22-8f2b-8d07c94a35f2 HTTP/1.1" 201 106 "-" "PostmanRuntime/7.35.0" {"timestamp":"19/Nov/2023:21:47:23 -0400"}
+info: Dentro de update user controller {"timestamp":"19/Nov/2023:21:47:49 -0400"}
+info: En update user service {"timestamp":"19/Nov/2023:21:47:49 -0400"}
+info: En find by id user repository {"timestamp":"19/Nov/2023:21:47:49 -0400"}
+info: En update user repository {"timestamp":"19/Nov/2023:21:47:49 -0400"}
+info: ::1 - - [20/Nov/2023:01:47:49 +0000] "PUT /api/users/80376b32-1119-4a22-8f2b-8d07c94a35f2 HTTP/1.1" 201 106 "-" "PostmanRuntime/7.35.0" {"timestamp":"19/Nov/2023:21:47:49 -0400"}
+info: Dentro de delete user by id controller {"timestamp":"19/Nov/2023:21:49:10 -0400"}
+info: En delete user by id service {"timestamp":"19/Nov/2023:21:49:10 -0400"}
+info: En delete user repository {"timestamp":"19/Nov/2023:21:49:10 -0400"}
+info: ::1 - - [20/Nov/2023:01:49:10 +0000] "DELETE /api/users/80376b32-1119-4a22-8f2b-8d07c94a35f2 HTTP/1.1" 200 44 "-" "PostmanRuntime/7.35.0" {"timestamp":"19/Nov/2023:21:49:10 -0400"}

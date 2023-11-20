@@ -26,3 +26,11 @@ export const jwt = {
     expirationTime: process.env.JWT_EXPIRATION_TIME
 }
 console.log(jwt);
+
+export const redis_env = {
+    url: process.env.REDIS_URL || 'otra_url'
+}
+
+export const bcrypt_vars = {
+    saltSync: Number(process.env.BCRYPT_SALT_SYNC) 
+}
