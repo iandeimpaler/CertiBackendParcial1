@@ -1,5 +1,5 @@
 import { Request, Response, Router } from 'express';
-import { LoginDTO } from '../../app/dtos/login.dto';
+import { LoginDTO } from '../../app/dtos/user/login';
 //TODO: ADD AUTH SERVICE
 import { AuthService } from '../../app/services/authService';
 import logger from '../../infrastructure/logger/logger';

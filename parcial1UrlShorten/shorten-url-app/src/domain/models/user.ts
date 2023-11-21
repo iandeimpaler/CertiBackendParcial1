@@ -19,4 +19,8 @@ export class User {
         this.lastLogin = userEntity.lastLogin;
     }
 
+    setPass = (newPass : string) => {
+        this.password = newPass;
+    }
+
 }

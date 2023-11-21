@@ -3,7 +3,12 @@ import { UserService } from '../../app/services/userService';
 import { CreateUserDTO } from '../../app/dtos/user/create.user.dto';
 import logger from '../../infrastructure/logger/logger';
 import { UpdateUserDTO } from '../../app/dtos/user/update.user.dto';
-import { verifyTokenMiddleware } from '../middleware/verifyToken';
+import { verifyTokenMiddleware } from '../middleware/user/verifyToken';
+import { equal } from 'assert';
+import { verifyDeleteMiddleware } from '../middleware/user/verifyDelete';
+import { InstanceChecker } from 'typeorm';
+import { userValidationRules, validate } from '../middleware/user/verifyCreate';
+import { updateValidate, userUpdateValidationRules } from '../middleware/user/verifyUpdate';
 
 export class UserController {
     public router: Router;
@@ -17,20 +22,23 @@ export class UserController {
     }
 
     public async getUserById(req: Request, res: Response): Promise<void> {
-        logger.info("Dentro de user by id controller");
-        const { id } = req.params;
-        console.log('testing=====', req.user_id);
-        const userDto = await this.userService.getUserById(id);
-        
-        if (!userDto) {
-            logger.error("Error al conseguir usuario", req.params);
-            res.status(404).json({ message: 'User not found' });
-            return;
-        }else{
+        try{
+            logger.info("Dentro de user by id controller");
+            const { id } = req.params;
+            console.log('testing=====', req.user_id);
+            const userDto = await this.userService.getUserById(id);
             logger.debug(`Usuario enviado por userService ${JSON.stringify(userDto)}`)
+            res.json(userDto);
+        } catch(error){
+            if(error instanceof Error){
+                logger.error("Error al conseguir usuario "+error.message, req.params);
+            } else{
+                logger.error("Error al conseguir usuario "+error, req.params);
+                
+            }   
+            res.status(404).json({ message: "Hubo un problema al conseguir el usuario"});
+            return;
         }
-
-        res.json(userDto);
     }
 
     public async createUser(req: Request, res: Response): Promise<Response> {
@@ -43,9 +51,9 @@ export class UserController {
         } catch (error) {
             logger.error("Error al crear usuario: "+error, req.body);
             if(error instanceof Error)
-                return res.status(500).json({ message: error.message });
+                return res.status(500).json({ message: "Hubo un problema al crear el usuario" });
             else
-                return res.status(500).json({ message: error});
+                return res.status(500).json({ message: "Hubo un problema al crear el usuario"});
         }
     }
 
@@ -58,10 +66,14 @@ export class UserController {
             logger.debug(`Usuario enviado por userService ${JSON.stringify(user)}`)
             return res.status(201).json(user);
         } catch (error) {
-            logger.error("Error al actualizar usuario: "+error, req.body);
-            console.log(error);
-            return res.status(400).json({ message: error });
-
+            if(error instanceof Error){
+                logger.error("Error al actualizar usuario "+error.message, req.params);
+            } else{
+                logger.error("Error al actualizar usuario "+error, req.params);
+                
+            }   
+            res.status(404).json({ message: "Hubo un problema al actualizar el usuario"});
+            return;
         }
     }
 
@@ -69,22 +81,14 @@ export class UserController {
         logger.info("Dentro de delete user by id controller");
         const { id } = req.params;
         const userDto = await this.userService.deleteUser(id);
-        
-        if (!userDto) {
-            logger.error("Error al eliminar usuario", req.params);
-            res.status(404).json({ message: 'User not deleted' });
-            return;
-        }else{
-            logger.debug(`Usuario enviado por userService ${JSON.stringify(userDto)}`)
-        }
-
-        res.json({ message: 'Usuario eliminado exitosamente' });
+        logger.debug(`Usuario enviado por userService ${JSON.stringify(userDto)}`)
+        res.status(202).json({ message: 'Usuario eliminado exitosamente' });
     }
 
     public routes() {
         this.router.get('/:id', verifyTokenMiddleware, this.getUserById.bind(this));
-        this.router.post('/', this.createUser.bind(this));
-        this.router.put('/:id', this.updateUser.bind(this));
-        this.router.delete('/:id', this.deleteUser.bind(this));
+        this.router.post('/', userValidationRules(), validate, this.createUser.bind(this));
+        this.router.put('/:id', verifyTokenMiddleware, userUpdateValidationRules(), updateValidate, this.updateUser.bind(this));
+        this.router.delete('/:id', verifyTokenMiddleware, verifyDeleteMiddleware, this.deleteUser.bind(this));
     }
 }

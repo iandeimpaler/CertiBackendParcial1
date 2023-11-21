@@ -6,27 +6,55 @@ import { CreateUserDTO } from "../dtos/user/create.user.dto";
 import { UserDto } from '../dtos/user/user.dto';
 import { UpdateUserDTO } from "../dtos/user/update.user.dto";
 import { DeletedDTO } from "../dtos/deleted";
+import { RedisCacheService } from "../../infrastructure/cache/redis.cache";
 
 export class UserService {
-    constructor(private userRepository: UserRepository) { }
+    constructor(private userRepository: UserRepository, private redisCacheService: RedisCacheService) { }
+
+    async getCache(userId: string){
+        const USER_KEY = 'USER';
+        const sol = await this.redisCacheService.get(`${USER_KEY}:${userId}`);
+        console.log(sol);
+        return sol;
+    }
+
+    setCache(userId: string, user: User){
+        const USER_KEY = 'USER';
+        this.redisCacheService.set(`${USER_KEY}:${userId}`, JSON.stringify(user));
+    }
 
     async getUserById(id: string): Promise<UserDto | null> {
 
-        logger.info("En get user by id service");
-        const user = await this.userRepository.findById(id);
-        if (!user){
-            return null
-        }
-        logger.debug(`Get usr service: Usuario regresado por repository ${JSON.stringify(user)}`);
+        const userCache = await this.getCache(id);
+        const userObject : User= JSON.parse(userCache);
+        if(!userObject){
+            logger.info("En get user by id service");
+            const user = await this.userRepository.findById(id);
+            if(!user){
+                logger.debug("No existe el usuario con id:"+id)
+                throw new Error("Hubo un error");
+            }
+            logger.debug(`Get usr service: Usuario regresado por repository ${JSON.stringify(user)}`);
 
-        const userResponse: UserDto = {
-            id: user.id,
-            email: user.email,
-            lastLogin: user.lastLogin,
-            numberOfLinks: user.numberOfLinks
+
+            const userResponse: UserDto = {
+                id: user.id,
+                email: user.email,
+                lastLogin: user.lastLogin,
+                numberOfLinks: user.numberOfLinks
+            }
+            this.setCache(user.id, user);
+            return userResponse;
+        } else{
+            logger.info("Utilizando user cache");
+            const userReponse: UserDto = {
+                id: userObject.id,
+                email: userObject.email,
+                lastLogin: userObject.lastLogin,
+                numberOfLinks: userObject.numberOfLinks
+            }
+            return userReponse;
         }
-        // log.info user obtenido exitosamente
-        return userResponse;
     }
 
     async createUser(userDto: CreateUserDTO): Promise<UserDto> {
@@ -48,18 +76,21 @@ export class UserService {
         logger.info("En update user service");
         const backupUser = await this.userRepository.findById(id);
         if (!backupUser){
-            return null
+            logger.debug("No existe el usuario con id:"+id)
+            throw new Error("No existe el usuario con id: "+id+" User DTO: "+userDto);
         }
         logger.debug(`Update usr service: Usuario regresado por repository ${JSON.stringify(backupUser)}`);
 
         const user: IUserEntity = {
+            id: backupUser.id,
             email: (userDto.email ? userDto.email : backupUser.email),
             password: (userDto.password ? userDto.password : backupUser.password),
             createdAt: backupUser.createdAt,
             lastLogin: backupUser.lastLogin,
             numberOfLinks: backupUser.numberOfLinks
         }
-        const responseUser = await this.userRepository.updateUser(new User(user), id);
+        const passChanged = (userDto.password ? true : false);
+        const responseUser = await this.userRepository.updateUser(new User(user), id, passChanged);
         logger.debug(`Update user Service: Usuario regresado por repository ${JSON.stringify(responseUser)}`);
         return {id: responseUser.id,email: responseUser.email, lastLogin: responseUser.lastLogin, numberOfLinks: responseUser.numberOfLinks};
     }
@@ -76,6 +107,17 @@ export class UserService {
         const userResponse: DeletedDTO = {
             message: "El usuario ha sido eliminado exitosamente"
         }
+
+        const deletedUser = new User( {
+            id: id,
+            email: "null",
+            lastLogin: null,
+            numberOfLinks: 0,
+            password: null,
+            createdAt: null
+        })
+        this.setCache(id, deletedUser);
+
         return userResponse;
     }
 

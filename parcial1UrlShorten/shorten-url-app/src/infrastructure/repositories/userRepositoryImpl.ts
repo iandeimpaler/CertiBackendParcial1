@@ -58,23 +58,26 @@ export class UserRepositoryImpl implements UserRepository {
         });
     }
 
-    async updateUser(user: User, id: string): Promise<User> {
+    async updateUser(user: User, id: string, passChanged: boolean): Promise<User> {
+        if(passChanged){
+            const salt = bcrypt.genSaltSync(bcrypt_vars.saltSync);
+            const hash = bcrypt.hashSync(user.password, salt);
+            user.setPass(hash);
+        }
         logger.info("En update user repository")
         // TODO: set user values 
         const userAux = await AppDataSource.getRepository(UserEntity).findOneBy({ id });
         logger.debug(`Respuesta de DB:${JSON.stringify(userAux)}`);
-        const userResponse = AppDataSource.getRepository(UserEntity).merge(userAux, {
-            email : user.email,
-            password : user.password,
-            lastLogin : user.lastLogin});
+        const userResponse = AppDataSource.getRepository(UserEntity).merge(userAux, user);
         logger.debug(`Respuesta de DB:${JSON.stringify(userResponse)}`);
-        return userResponse? new User({
-            id: userResponse.id,
-            email: userResponse.email,
-            password: userResponse.password,
-            createdAt: userResponse.createdAt,
-            lastLogin: userResponse.lastLogin,
-            numberOfLinks: userResponse.numberOfLinks
+        const newUser = await AppDataSource.getRepository(UserEntity).save(userAux);
+        return newUser? new User({
+            id: newUser.id,
+            email: newUser.email,
+            password: newUser.password,
+            createdAt: newUser.createdAt,
+            lastLogin: newUser.lastLogin,
+            numberOfLinks: newUser.numberOfLinks
         }) : null;
     }
 }

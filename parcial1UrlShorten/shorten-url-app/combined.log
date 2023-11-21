@@ -19,3 +19,301 @@ info: Dentro de delete user by id controller {"timestamp":"19/Nov/2023:21:49:10 
 info: En delete user by id service {"timestamp":"19/Nov/2023:21:49:10 -0400"}
 info: En delete user repository {"timestamp":"19/Nov/2023:21:49:10 -0400"}
 info: ::1 - - [20/Nov/2023:01:49:10 +0000] "DELETE /api/users/80376b32-1119-4a22-8f2b-8d07c94a35f2 HTTP/1.1" 200 44 "-" "PostmanRuntime/7.35.0" {"timestamp":"19/Nov/2023:21:49:10 -0400"}
+info: Dentro de create user controller {"timestamp":"20/Nov/2023:18:16:50 -0400"}
+info: En create user repository {"timestamp":"20/Nov/2023:18:16:50 -0400"}
+info: ::1 - - [20/Nov/2023:22:16:50 +0000] "POST /api/users/ HTTP/1.1" 201 106 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:16:50 -0400"}
+info: ::1 - - [20/Nov/2023:22:20:30 +0000] "GET /api/users/032f6489-60ec-45c8-943c-99cf998daf1f HTTP/1.1" 401 36 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:20:30 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:18:22:18 -0400"}
+info: ::1 - - [20/Nov/2023:22:22:18 +0000] "POST /api/auth/login HTTP/1.1" 200 331 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:22:18 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:18:26:11 -0400"}
+info: ::1 - - [20/Nov/2023:22:26:11 +0000] "POST /api/auth/login HTTP/1.1" 200 331 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:26:11 -0400"}
+info: ::1 - - [20/Nov/2023:22:26:34 +0000] "GET /api/users/032f6489-60ec-45c8-943c-99cf998daf1f HTTP/1.1" 403 30 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:26:34 -0400"}
+info: ::1 - - [20/Nov/2023:22:26:36 +0000] "GET /api/users/032f6489-60ec-45c8-943c-99cf998daf1f HTTP/1.1" 403 30 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:26:36 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:18:26:41 -0400"}
+info: ::1 - - [20/Nov/2023:22:26:41 +0000] "POST /api/auth/login HTTP/1.1" 200 331 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:26:41 -0400"}
+info: ::1 - - [20/Nov/2023:22:26:44 +0000] "GET /api/users/032f6489-60ec-45c8-943c-99cf998daf1f HTTP/1.1" 403 30 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:26:44 -0400"}
+info: ::1 - - [20/Nov/2023:22:26:59 +0000] "GET /api/users/032f6489-60ec-45c8-943c-99cf998daf1f HTTP/1.1" 403 30 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:26:59 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:18:28:55 -0400"}
+info: ::1 - - [20/Nov/2023:22:28:55 +0000] "POST /api/auth/login HTTP/1.1" 200 331 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:28:55 -0400"}
+info: Dentro de user by id controller {"timestamp":"20/Nov/2023:18:29:11 -0400"}
+info: En get user by id service {"timestamp":"20/Nov/2023:18:29:12 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:18:29:12 -0400"}
+info: ::1 - - [20/Nov/2023:22:29:12 +0000] "GET /api/users/032f6489-60ec-45c8-943c-99cf998daf1f HTTP/1.1" 200 106 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:29:12 -0400"}
+info: Dentro de create user controller {"timestamp":"20/Nov/2023:18:35:10 -0400"}
+info: En create user repository {"timestamp":"20/Nov/2023:18:35:10 -0400"}
+info: ::1 - - [20/Nov/2023:22:35:10 +0000] "POST /api/users/ HTTP/1.1" 201 107 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:35:10 -0400"}
+info: Dentro de delete user by id controller {"timestamp":"20/Nov/2023:18:35:28 -0400"}
+info: En delete user by id service {"timestamp":"20/Nov/2023:18:35:28 -0400"}
+info: En delete user repository {"timestamp":"20/Nov/2023:18:35:28 -0400"}
+info: ::1 - - [20/Nov/2023:22:35:28 +0000] "DELETE /api/users/7d94fbc5-f8a9-406a-bf2a-920117840324 HTTP/1.1" 401 46 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:35:28 -0400"}
+info: Dentro de delete user by id controller {"timestamp":"20/Nov/2023:18:36:56 -0400"}
+info: En delete user by id service {"timestamp":"20/Nov/2023:18:36:56 -0400"}
+info: En delete user repository {"timestamp":"20/Nov/2023:18:36:56 -0400"}
+info: ::1 - - [20/Nov/2023:22:36:56 +0000] "DELETE /api/users/032f6489-60ec-45c8-943c-99cf998daf1f HTTP/1.1" 202 44 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:36:56 -0400"}
+info: Dentro de user by id controller {"timestamp":"20/Nov/2023:18:37:01 -0400"}
+info: Utilizando user cache {"timestamp":"20/Nov/2023:18:37:02 -0400"}
+info: ::1 - - [20/Nov/2023:22:37:02 +0000] "GET /api/users/032f6489-60ec-45c8-943c-99cf998daf1f HTTP/1.1" 200 106 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:37:02 -0400"}
+info: Dentro de user by id controller {"timestamp":"20/Nov/2023:18:37:04 -0400"}
+info: Utilizando user cache {"timestamp":"20/Nov/2023:18:37:04 -0400"}
+info: ::1 - - [20/Nov/2023:22:37:04 +0000] "GET /api/users/032f6489-60ec-45c8-943c-99cf998daf1f HTTP/1.1" 200 106 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:37:04 -0400"}
+error: El usuario con email: juan31@gmail.com no existe {"timestamp":"20/Nov/2023:18:50:51 -0400"}
+error: There is an error in the login process El email o la contraseña son incorrectos {"stack":"Error: El email o la contraseña son incorrectos\n    at AuthService.<anonymous> (C:\\Users\\FER\\Desktop\\backendP1\\CertiBackendParcial1\\parcial1UrlShorten\\shorten-url-app\\src\\app\\services\\authService.ts:23:19)\n    at Generator.next (<anonymous>)\n    at fulfilled (C:\\Users\\FER\\Desktop\\backendP1\\CertiBackendParcial1\\parcial1UrlShorten\\shorten-url-app\\src\\app\\services\\authService.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"20/Nov/2023:18:50:51 -0400"}
+info: ::1 - - [20/Nov/2023:22:50:51 +0000] "POST /api/auth/login HTTP/1.1" 400 55 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:50:51 -0400"}
+error: El usuario con email: juan31@gmail.com no existe {"timestamp":"20/Nov/2023:18:51:07 -0400"}
+error: There is an error in the login process El email o la contraseña son incorrectos {"stack":"Error: El email o la contraseña son incorrectos\n    at AuthService.<anonymous> (C:\\Users\\FER\\Desktop\\backendP1\\CertiBackendParcial1\\parcial1UrlShorten\\shorten-url-app\\src\\app\\services\\authService.ts:23:19)\n    at Generator.next (<anonymous>)\n    at fulfilled (C:\\Users\\FER\\Desktop\\backendP1\\CertiBackendParcial1\\parcial1UrlShorten\\shorten-url-app\\src\\app\\services\\authService.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"20/Nov/2023:18:51:07 -0400"}
+info: ::1 - - [20/Nov/2023:22:51:07 +0000] "POST /api/auth/login HTTP/1.1" 400 55 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:51:07 -0400"}
+error: El usuario con email: juan31@gmail.com no existe {"timestamp":"20/Nov/2023:18:51:12 -0400"}
+error: There is an error in the login process El email o la contraseña son incorrectos {"stack":"Error: El email o la contraseña son incorrectos\n    at AuthService.<anonymous> (C:\\Users\\FER\\Desktop\\backendP1\\CertiBackendParcial1\\parcial1UrlShorten\\shorten-url-app\\src\\app\\services\\authService.ts:23:19)\n    at Generator.next (<anonymous>)\n    at fulfilled (C:\\Users\\FER\\Desktop\\backendP1\\CertiBackendParcial1\\parcial1UrlShorten\\shorten-url-app\\src\\app\\services\\authService.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"20/Nov/2023:18:51:12 -0400"}
+info: ::1 - - [20/Nov/2023:22:51:12 +0000] "POST /api/auth/login HTTP/1.1" 400 55 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:51:12 -0400"}
+info: Dentro de create user controller {"timestamp":"20/Nov/2023:18:51:26 -0400"}
+info: En create user repository {"timestamp":"20/Nov/2023:18:51:26 -0400"}
+info: ::1 - - [20/Nov/2023:22:51:26 +0000] "POST /api/users/ HTTP/1.1" 201 107 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:51:26 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:18:51:52 -0400"}
+info: ::1 - - [20/Nov/2023:22:51:52 +0000] "POST /api/auth/login HTTP/1.1" 200 332 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:51:52 -0400"}
+info: Dentro de create user controller {"timestamp":"20/Nov/2023:18:52:06 -0400"}
+info: En create user repository {"timestamp":"20/Nov/2023:18:52:06 -0400"}
+info: ::1 - - [20/Nov/2023:22:52:07 +0000] "POST /api/users/ HTTP/1.1" 201 107 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:52:07 -0400"}
+info: Dentro de delete user by id controller {"timestamp":"20/Nov/2023:18:52:18 -0400"}
+info: En delete user by id service {"timestamp":"20/Nov/2023:18:52:18 -0400"}
+info: En delete user repository {"timestamp":"20/Nov/2023:18:52:18 -0400"}
+info: ::1 - - [20/Nov/2023:22:52:18 +0000] "DELETE /api/users/6aa326e5-39e2-4e09-a912-a0a617d1a2ad HTTP/1.1" 202 44 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:52:18 -0400"}
+info: Dentro de create user controller {"timestamp":"20/Nov/2023:18:53:10 -0400"}
+info: En create user repository {"timestamp":"20/Nov/2023:18:53:10 -0400"}
+info: ::1 - - [20/Nov/2023:22:53:10 +0000] "POST /api/users/ HTTP/1.1" 201 107 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:53:10 -0400"}
+info: ::1 - - [20/Nov/2023:22:53:37 +0000] "DELETE /api/users/096bc7af-7a4f-44d4-9660-cef20950fc34 HTTP/1.1" 401 43 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:53:37 -0400"}
+info: Dentro de delete user by id controller {"timestamp":"20/Nov/2023:18:54:12 -0400"}
+info: En delete user by id service {"timestamp":"20/Nov/2023:18:54:12 -0400"}
+info: En delete user repository {"timestamp":"20/Nov/2023:18:54:12 -0400"}
+info: ::1 - - [20/Nov/2023:22:54:12 +0000] "DELETE /api/users/c290db5b-d950-4185-bb38-d4dfea181e59 HTTP/1.1" 202 44 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:18:54:12 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:20:12:21 -0400"}
+info: ::1 - - [21/Nov/2023:00:12:21 +0000] "POST /api/auth/login HTTP/1.1" 200 332 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:12:21 -0400"}
+info: Dentro de user by id controller {"timestamp":"20/Nov/2023:20:12:42 -0400"}
+info: En get user by id service {"timestamp":"20/Nov/2023:20:12:42 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:20:12:42 -0400"}
+info: ::1 - - [21/Nov/2023:00:12:42 +0000] "GET /api/users/096bc7af-7a4f-44d4-9660-cef20950fc34 HTTP/1.1" 200 107 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:12:42 -0400"}
+info: Dentro de delete user by id controller {"timestamp":"20/Nov/2023:20:12:49 -0400"}
+info: En delete user by id service {"timestamp":"20/Nov/2023:20:12:49 -0400"}
+info: En delete user repository {"timestamp":"20/Nov/2023:20:12:49 -0400"}
+info: ::1 - - [21/Nov/2023:00:12:49 +0000] "DELETE /api/users/096bc7af-7a4f-44d4-9660-cef20950fc34 HTTP/1.1" 202 44 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:12:49 -0400"}
+info: Dentro de user by id controller {"timestamp":"20/Nov/2023:20:12:54 -0400"}
+info: Utilizando user cache {"timestamp":"20/Nov/2023:20:12:54 -0400"}
+info: ::1 - - [21/Nov/2023:00:12:54 +0000] "GET /api/users/096bc7af-7a4f-44d4-9660-cef20950fc34 HTTP/1.1" 200 95 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:12:54 -0400"}
+info: ::1 - - [21/Nov/2023:00:13:17 +0000] "PUT /api/users/096bc7af-7a4f-44d4-9660-cef20950fc34 HTTP/1.1" 401 36 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:13:17 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:20:13:24 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:20:13:24 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:20:13:24 -0400"}
+info: ::1 - - [21/Nov/2023:00:13:24 +0000] "PUT /api/users/096bc7af-7a4f-44d4-9660-cef20950fc34 HTTP/1.1" 201 4 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:13:24 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:20:13:30 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:20:13:30 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:20:13:30 -0400"}
+info: ::1 - - [21/Nov/2023:00:13:30 +0000] "PUT /api/users/096bc7af-7a4f-44d4-9660-cef20950fc34 HTTP/1.1" 201 4 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:13:30 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:20:19:53 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:20:19:53 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:20:19:53 -0400"}
+info: ::1 - - [21/Nov/2023:00:19:53 +0000] "PUT /api/users/096bc7af-7a4f-44d4-9660-cef20950fc34 HTTP/1.1" 201 4 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:19:53 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:20:19:57 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:20:19:57 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:20:19:57 -0400"}
+info: ::1 - - [21/Nov/2023:00:19:57 +0000] "PUT /api/users/096bc7af-7a4f-44d4-9660-cef20950fc34 HTTP/1.1" 201 4 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:19:57 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:20:20:43 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:20:20:43 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:20:20:43 -0400"}
+error: Error al actualizar usuario: Error: Hubo un error {"email":"juan2@gmail.com","timestamp":"20/Nov/2023:20:20:43 -0400"}
+info: ::1 - - [21/Nov/2023:00:20:43 +0000] "PUT /api/users/096bc7af-7a4f-44d4-9660-cef20950fc34 HTTP/1.1" 400 14 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:20:43 -0400"}
+info: Dentro de create user controller {"timestamp":"20/Nov/2023:20:27:41 -0400"}
+info: En create user repository {"timestamp":"20/Nov/2023:20:27:41 -0400"}
+info: ::1 - - [21/Nov/2023:00:27:41 +0000] "POST /api/users/ HTTP/1.1" 201 107 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:27:41 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:20:27:50 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:20:27:50 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:20:27:50 -0400"}
+error: Error al actualizar usuario: Error: Hubo un error {"email":"juan25@gmail.com","timestamp":"20/Nov/2023:20:27:50 -0400"}
+info: ::1 - - [21/Nov/2023:00:27:50 +0000] "PUT /api/users/096bc7af-7a4f-44d4-9660-cef20950fc34 HTTP/1.1" 400 27 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:27:50 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:20:28:03 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:20:28:03 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:20:28:03 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:20:28:03 -0400"}
+info: ::1 - - [21/Nov/2023:00:28:03 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 201 107 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:28:03 -0400"}
+error: El usuario con email: juan25@gmail.com no existe {"timestamp":"20/Nov/2023:20:28:28 -0400"}
+error: There is an error in the login process El email o la contraseña son incorrectos {"stack":"Error: El email o la contraseña son incorrectos\n    at AuthService.<anonymous> (C:\\Users\\FER\\Desktop\\backendP1\\CertiBackendParcial1\\parcial1UrlShorten\\shorten-url-app\\src\\app\\services\\authService.ts:23:19)\n    at Generator.next (<anonymous>)\n    at fulfilled (C:\\Users\\FER\\Desktop\\backendP1\\CertiBackendParcial1\\parcial1UrlShorten\\shorten-url-app\\src\\app\\services\\authService.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"20/Nov/2023:20:28:28 -0400"}
+info: ::1 - - [21/Nov/2023:00:28:28 +0000] "POST /api/auth/login HTTP/1.1" 400 55 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:28:28 -0400"}
+error: El usuario con email: juan25@gmail.com no existe {"timestamp":"20/Nov/2023:20:28:49 -0400"}
+error: There is an error in the login process El email o la contraseña son incorrectos {"stack":"Error: El email o la contraseña son incorrectos\n    at AuthService.<anonymous> (C:\\Users\\FER\\Desktop\\backendP1\\CertiBackendParcial1\\parcial1UrlShorten\\shorten-url-app\\src\\app\\services\\authService.ts:23:19)\n    at Generator.next (<anonymous>)\n    at fulfilled (C:\\Users\\FER\\Desktop\\backendP1\\CertiBackendParcial1\\parcial1UrlShorten\\shorten-url-app\\src\\app\\services\\authService.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"20/Nov/2023:20:28:49 -0400"}
+info: ::1 - - [21/Nov/2023:00:28:49 +0000] "POST /api/auth/login HTTP/1.1" 400 55 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:28:49 -0400"}
+info: ::1 - - [21/Nov/2023:00:29:08 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 403 30 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:29:08 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:20:29:29 -0400"}
+info: ::1 - - [21/Nov/2023:00:29:29 +0000] "POST /api/auth/login HTTP/1.1" 200 332 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:29:29 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:20:29:38 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:20:29:38 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:20:29:38 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:20:29:38 -0400"}
+info: ::1 - - [21/Nov/2023:00:29:38 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 201 107 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:29:38 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:20:29:41 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:20:29:41 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:20:29:41 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:20:29:41 -0400"}
+info: ::1 - - [21/Nov/2023:00:29:41 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 201 107 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:29:41 -0400"}
+info: Dentro de user by id controller {"timestamp":"20/Nov/2023:20:30:05 -0400"}
+info: En get user by id service {"timestamp":"20/Nov/2023:20:30:05 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:20:30:05 -0400"}
+info: ::1 - - [21/Nov/2023:00:30:05 +0000] "GET /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 200 107 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:30:05 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:20:32:32 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:20:32:32 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:20:32:32 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:20:32:32 -0400"}
+info: ::1 - - [21/Nov/2023:00:32:32 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 201 107 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:32:32 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:20:32:34 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:20:32:34 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:20:32:34 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:20:32:34 -0400"}
+info: ::1 - - [21/Nov/2023:00:32:34 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 201 107 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:32:34 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:20:34:28 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:20:34:28 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:20:34:28 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:20:34:28 -0400"}
+info: ::1 - - [21/Nov/2023:00:34:28 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 201 107 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:34:28 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:20:35:09 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:20:35:09 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:20:35:09 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:20:35:09 -0400"}
+error: Error al actualizar usuario: QueryFailedError: Duplicate entry 'juan25@gmail.com' for key 'user_entity.IDX_415c35b9b3b6fe45a3b065030f' {"password":"juan1","timestamp":"20/Nov/2023:20:35:09 -0400"}
+info: ::1 - - [21/Nov/2023:00:35:09 +0000] "PUT /api/users/a7db9d2d-d973-4c7d-be81-6669ad61010d HTTP/1.1" 400 101 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:35:09 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:20:38:00 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:20:38:00 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:20:38:00 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:20:38:00 -0400"}
+info: ::1 - - [21/Nov/2023:00:38:00 +0000] "PUT /api/users/a7db9d2d-d973-4c7d-be81-6669ad61010d HTTP/1.1" 201 107 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:38:00 -0400"}
+error: La contraseña del usuario es incorrecta {"timestamp":"20/Nov/2023:20:38:20 -0400"}
+error: There is an error in the login process El email o la contraseña son incorrectos {"stack":"Error: El email o la contraseña son incorrectos\n    at AuthService.<anonymous> (C:\\Users\\FER\\Desktop\\backendP1\\CertiBackendParcial1\\parcial1UrlShorten\\shorten-url-app\\src\\app\\services\\authService.ts:29:19)\n    at Generator.next (<anonymous>)\n    at fulfilled (C:\\Users\\FER\\Desktop\\backendP1\\CertiBackendParcial1\\parcial1UrlShorten\\shorten-url-app\\src\\app\\services\\authService.ts:5:58)","timestamp":"20/Nov/2023:20:38:20 -0400"}
+info: ::1 - - [21/Nov/2023:00:38:20 +0000] "POST /api/auth/login HTTP/1.1" 400 55 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:38:20 -0400"}
+info: ::1 - - [21/Nov/2023:00:38:44 +0000] "PUT /api/users/a7db9d2d-d973-4c7d-be81-6669ad61010d HTTP/1.1" 403 30 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:38:44 -0400"}
+error: La contraseña del usuario es incorrecta {"timestamp":"20/Nov/2023:20:38:54 -0400"}
+error: There is an error in the login process El email o la contraseña son incorrectos {"stack":"Error: El email o la contraseña son incorrectos\n    at AuthService.<anonymous> (C:\\Users\\FER\\Desktop\\backendP1\\CertiBackendParcial1\\parcial1UrlShorten\\shorten-url-app\\src\\app\\services\\authService.ts:29:19)\n    at Generator.next (<anonymous>)\n    at fulfilled (C:\\Users\\FER\\Desktop\\backendP1\\CertiBackendParcial1\\parcial1UrlShorten\\shorten-url-app\\src\\app\\services\\authService.ts:5:58)","timestamp":"20/Nov/2023:20:38:54 -0400"}
+info: ::1 - - [21/Nov/2023:00:38:54 +0000] "POST /api/auth/login HTTP/1.1" 400 55 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:38:54 -0400"}
+error: La contraseña del usuario es incorrecta {"timestamp":"20/Nov/2023:20:38:56 -0400"}
+error: There is an error in the login process El email o la contraseña son incorrectos {"stack":"Error: El email o la contraseña son incorrectos\n    at AuthService.<anonymous> (C:\\Users\\FER\\Desktop\\backendP1\\CertiBackendParcial1\\parcial1UrlShorten\\shorten-url-app\\src\\app\\services\\authService.ts:29:19)\n    at Generator.next (<anonymous>)\n    at fulfilled (C:\\Users\\FER\\Desktop\\backendP1\\CertiBackendParcial1\\parcial1UrlShorten\\shorten-url-app\\src\\app\\services\\authService.ts:5:58)","timestamp":"20/Nov/2023:20:38:56 -0400"}
+info: ::1 - - [21/Nov/2023:00:38:56 +0000] "POST /api/auth/login HTTP/1.1" 400 55 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:38:56 -0400"}
+error: La contraseña del usuario es incorrecta {"timestamp":"20/Nov/2023:20:39:00 -0400"}
+error: There is an error in the login process El email o la contraseña son incorrectos {"stack":"Error: El email o la contraseña son incorrectos\n    at AuthService.<anonymous> (C:\\Users\\FER\\Desktop\\backendP1\\CertiBackendParcial1\\parcial1UrlShorten\\shorten-url-app\\src\\app\\services\\authService.ts:29:19)\n    at Generator.next (<anonymous>)\n    at fulfilled (C:\\Users\\FER\\Desktop\\backendP1\\CertiBackendParcial1\\parcial1UrlShorten\\shorten-url-app\\src\\app\\services\\authService.ts:5:58)","timestamp":"20/Nov/2023:20:39:00 -0400"}
+info: ::1 - - [21/Nov/2023:00:39:00 +0000] "POST /api/auth/login HTTP/1.1" 400 55 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:39:00 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:20:42:53 -0400"}
+info: ::1 - - [21/Nov/2023:00:42:53 +0000] "POST /api/auth/login HTTP/1.1" 200 332 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:42:53 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:20:51:21 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:20:51:21 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:20:51:21 -0400"}
+error: Error al actualizar usuario: Error: Hubo un error {"email":"juan331@gmail.com","timestamp":"20/Nov/2023:20:51:21 -0400"}
+info: ::1 - - [21/Nov/2023:00:51:21 +0000] "PUT /api/users/a7db9d2d-d973-4c7d-be81-6669ad61010d HTTP/1.1" 400 27 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:51:21 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:20:51:24 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:20:51:24 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:20:51:24 -0400"}
+error: Error al actualizar usuario: Error: Hubo un error {"email":"juan331@gmail.com","timestamp":"20/Nov/2023:20:51:24 -0400"}
+info: ::1 - - [21/Nov/2023:00:51:24 +0000] "PUT /api/users/a7db9d2d-d973-4c7d-be81-6669ad61010d HTTP/1.1" 400 27 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:51:24 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:20:51:43 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:20:51:43 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:20:51:43 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:20:51:43 -0400"}
+info: ::1 - - [21/Nov/2023:00:51:43 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 201 130 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:20:51:43 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:21:15:29 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:21:15:29 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:21:15:29 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:21:15:29 -0400"}
+info: ::1 - - [21/Nov/2023:01:15:29 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 201 130 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:15:29 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:21:15:38 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:21:15:38 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:21:15:38 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:21:15:38 -0400"}
+info: ::1 - - [21/Nov/2023:01:15:38 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 201 130 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:15:38 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:21:15:55 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:21:15:55 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:21:15:55 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:21:15:55 -0400"}
+info: ::1 - - [21/Nov/2023:01:15:55 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 201 130 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:15:55 -0400"}
+error: El usuario con email: juan33@gmail.com no existe {"timestamp":"20/Nov/2023:21:16:11 -0400"}
+error: There is an error in the login process El email o la contraseña son incorrectos {"stack":"Error: El email o la contraseña son incorrectos\n    at AuthService.<anonymous> (C:\\Users\\FER\\Desktop\\backendP1\\CertiBackendParcial1\\parcial1UrlShorten\\shorten-url-app\\src\\app\\services\\authService.ts:23:19)\n    at Generator.next (<anonymous>)\n    at fulfilled (C:\\Users\\FER\\Desktop\\backendP1\\CertiBackendParcial1\\parcial1UrlShorten\\shorten-url-app\\src\\app\\services\\authService.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)","timestamp":"20/Nov/2023:21:16:11 -0400"}
+info: ::1 - - [21/Nov/2023:01:16:11 +0000] "POST /api/auth/login HTTP/1.1" 400 55 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:16:11 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:21:16:18 -0400"}
+info: ::1 - - [21/Nov/2023:01:16:18 +0000] "POST /api/auth/login HTTP/1.1" 200 333 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:16:18 -0400"}
+info: Dentro de create user controller {"timestamp":"20/Nov/2023:21:18:29 -0400"}
+info: En create user repository {"timestamp":"20/Nov/2023:21:18:29 -0400"}
+error: Error al crear usuario: QueryFailedError: Duplicate entry 'juan333@gmail.com' for key 'user_entity.IDX_415c35b9b3b6fe45a3b065030f' {"email":"juan333@gmail.com","password":"juan","timestamp":"20/Nov/2023:21:18:29 -0400"}
+info: ::1 - - [21/Nov/2023:01:18:29 +0000] "POST /api/users/ HTTP/1.1" 500 102 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:18:29 -0400"}
+info: Dentro de create user controller {"timestamp":"20/Nov/2023:21:19:20 -0400"}
+info: En create user repository {"timestamp":"20/Nov/2023:21:19:20 -0400"}
+error: Error al crear usuario: QueryFailedError: Duplicate entry 'juan333@gmail.com' for key 'user_entity.IDX_415c35b9b3b6fe45a3b065030f' {"email":"juan333@gmail.com","password":"juan","timestamp":"20/Nov/2023:21:19:20 -0400"}
+info: ::1 - - [21/Nov/2023:01:19:20 +0000] "POST /api/users/ HTTP/1.1" 500 50 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:19:20 -0400"}
+info: ::1 - - [21/Nov/2023:01:33:05 +0000] "POST /api/users/ HTTP/1.1" 400 121 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:33:05 -0400"}
+info: ::1 - - [21/Nov/2023:01:33:16 +0000] "POST /api/users/ HTTP/1.1" 400 136 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:33:16 -0400"}
+info: Dentro de create user controller {"timestamp":"20/Nov/2023:21:33:27 -0400"}
+info: En create user repository {"timestamp":"20/Nov/2023:21:33:27 -0400"}
+info: ::1 - - [21/Nov/2023:01:33:28 +0000] "POST /api/users/ HTTP/1.1" 201 108 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:33:28 -0400"}
+info: ::1 - - [21/Nov/2023:01:36:17 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 400 209 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:36:17 -0400"}
+info: ::1 - - [21/Nov/2023:01:37:38 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 400 209 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:37:38 -0400"}
+info: ::1 - - [21/Nov/2023:01:37:46 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 400 209 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:37:46 -0400"}
+info: ::1 - - [21/Nov/2023:01:37:49 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 400 209 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:37:49 -0400"}
+info: ::1 - - [21/Nov/2023:01:37:50 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 400 209 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:37:50 -0400"}
+info: ::1 - - [21/Nov/2023:01:37:51 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 400 209 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:37:51 -0400"}
+info: ::1 - - [21/Nov/2023:01:37:52 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 400 209 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:37:52 -0400"}
+info: ::1 - - [21/Nov/2023:01:37:53 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 400 209 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:37:53 -0400"}
+info: ::1 - - [21/Nov/2023:01:37:53 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 400 209 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:37:53 -0400"}
+info: ::1 - - [21/Nov/2023:01:37:54 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 400 209 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:37:54 -0400"}
+info: ::1 - - [21/Nov/2023:01:37:56 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 400 209 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:37:56 -0400"}
+info: ::1 - - [21/Nov/2023:01:41:24 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" - - "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:41:24 -0400"}
+info: ::1 - - [21/Nov/2023:01:41:32 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" - - "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:41:32 -0400"}
+info: ::1 - - [21/Nov/2023:01:42:11 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" - - "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:42:11 -0400"}
+info: ::1 - - [21/Nov/2023:01:42:31 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 400 209 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:42:31 -0400"}
+info: ::1 - - [21/Nov/2023:01:43:35 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 400 137 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:43:35 -0400"}
+info: ::1 - - [21/Nov/2023:01:44:42 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 400 232 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:44:42 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:21:44:56 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:21:44:56 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:21:44:56 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:21:44:56 -0400"}
+info: ::1 - - [21/Nov/2023:01:44:56 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 201 130 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:44:56 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:21:44:59 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:21:44:59 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:21:44:59 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:21:44:59 -0400"}
+info: ::1 - - [21/Nov/2023:01:44:59 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 201 130 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:44:59 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:21:45:05 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:21:45:05 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:21:45:05 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:21:45:05 -0400"}
+info: ::1 - - [21/Nov/2023:01:45:05 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 201 130 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:45:05 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:21:45:39 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:21:45:39 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:21:45:39 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:21:45:39 -0400"}
+info: ::1 - - [21/Nov/2023:01:45:39 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 201 130 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:45:39 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:21:45:40 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:21:45:40 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:21:45:40 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:21:45:40 -0400"}
+info: ::1 - - [21/Nov/2023:01:45:40 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 201 130 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:45:40 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:21:45:41 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:21:45:41 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:21:45:41 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:21:45:41 -0400"}
+info: ::1 - - [21/Nov/2023:01:45:41 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 201 130 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:45:41 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:21:45:57 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:21:45:57 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:21:45:57 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:21:45:57 -0400"}
+info: ::1 - - [21/Nov/2023:01:45:57 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 201 130 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:45:57 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:21:45:58 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:21:45:58 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:21:45:58 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:21:45:58 -0400"}
+info: ::1 - - [21/Nov/2023:01:45:58 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 201 130 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:45:58 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:21:45:59 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:21:45:59 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:21:45:59 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:21:45:59 -0400"}
+info: ::1 - - [21/Nov/2023:01:45:59 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 201 130 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:45:59 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:21:46:00 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:21:46:00 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:21:46:00 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:21:46:00 -0400"}
+info: ::1 - - [21/Nov/2023:01:46:00 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 201 130 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:46:00 -0400"}
+info: Dentro de update user controller {"timestamp":"20/Nov/2023:21:46:00 -0400"}
+info: En update user service {"timestamp":"20/Nov/2023:21:46:00 -0400"}
+info: En find by id user repository {"timestamp":"20/Nov/2023:21:46:00 -0400"}
+info: En update user repository {"timestamp":"20/Nov/2023:21:46:00 -0400"}
+info: ::1 - - [21/Nov/2023:01:46:00 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 201 130 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:46:00 -0400"}

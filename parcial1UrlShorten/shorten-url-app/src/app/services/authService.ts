@@ -33,7 +33,7 @@ export class AuthService {
         user.token = token;
         user.lastLogin = new Date();
 
-        const userUpdated = await this.userRepository.updateUser(user, user.id);
+        const userUpdated = await this.userRepository.updateUser(user, user.id, false);
 
         // TODO: se deberia modificar el token y tambien el lastlogin
         return {

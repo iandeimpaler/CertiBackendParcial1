@@ -10,7 +10,7 @@ const encrypt = new EncryptImpl();
 const redisCacheService = new RedisCacheService();
 
 const userRepository = new UserRepositoryImpl();
-const userService = new UserService(userRepository);
+const userService = new UserService(userRepository, redisCacheService);
 const userController = new UserController(userService);
 
 const authService = new AuthService(userRepository, encrypt);
