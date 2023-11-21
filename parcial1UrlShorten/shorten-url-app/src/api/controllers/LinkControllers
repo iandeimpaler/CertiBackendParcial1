@@ -1,0 +1,49 @@
+import { Request, Response } from 'express';
+import { LinkService } from '../services/linkService';
+import { Link } from '../../domain/models/link';
+import { DeleteResult } from 'typeorm';
+
+export class LinkController {
+    constructor(private linkService: LinkService) {}
+
+    async getLinkById(req: Request, res: Response): Promise<void> {
+        const { id } = req.params;
+        try {
+            const link = await this.linkService.getLinkById(id);
+            res.status(200).json(link);
+        } catch (error) {
+            res.status(404).json({ error: error.message });
+        }
+    }
+
+    async createLink(req: Request, res: Response): Promise<void> {
+        const linkEntity: Partial<Link> = req.body; // Assuming you have middleware to parse the request body
+        const link = new Link(linkEntity);
+        try {
+            const newLink = await this.linkService.createLink(link);
+            res.status(201).json(newLink);
+        } catch (error) {
+            res.status(400).json({ error: error.message });
+        }
+    }
+
+    async deleteLink(req: Request, res: Response): Promise<void> {
+        const { id } = req.params;
+        try {
+            const result: DeleteResult = await this.linkService.deleteLink(id);
+            res.status(200).json({ message: `Link eliminado exitosamente. ${result.affected} filas afectadas.` });
+        } catch (error) {
+            res.status(404).json({ error: error.message });
+        }
+    }
+
+    async getLinkByLongUrl(req: Request, res: Response): Promise<void> {
+        const { longUrl } = req.params;
+        try {
+            const link = await this.linkService.getLinkByLongUrl(longUrl);
+            res.status(200).json(link);
+        } catch (error) {
+            res.status(404).json({ error: error.message });
+        }
+    }
+}
