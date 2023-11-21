@@ -22,6 +22,8 @@ export class AuthService {
             logger.error(`El usuario con email: ${userEntity.email} no existe`);
             throw new Error('El email o la contraseña son incorrectos');
         }
+        logger.debug(`Get auth service: user regresado por repository ${JSON.stringify(user)}`);
+
 
         const isPasswordValid = await bcrypt.compare(userEntity.password, user.password);
         if (!isPasswordValid){
@@ -34,6 +36,7 @@ export class AuthService {
         user.lastLogin = new Date();
 
         const userUpdated = await this.userRepository.updateUser(user, user.id, false);
+        logger.debug(`Get auth service: user regresado por repository ${JSON.stringify(userUpdated)}`);
 
         // TODO: se deberia modificar el token y tambien el lastlogin
         return {

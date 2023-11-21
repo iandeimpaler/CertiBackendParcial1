@@ -27,3 +27,4 @@ error: There is an error in the login process El email o la contraseña son inco
 error: Error al crear usuario: QueryFailedError: Duplicate entry 'juan333@gmail.com' for key 'user_entity.IDX_415c35b9b3b6fe45a3b065030f' {"email":"juan333@gmail.com","password":"juan","timestamp":"20/Nov/2023:21:18:29 -0400"}
 error: Error al crear usuario: QueryFailedError: Duplicate entry 'juan333@gmail.com' for key 'user_entity.IDX_415c35b9b3b6fe45a3b065030f' {"email":"juan333@gmail.com","password":"juan","timestamp":"20/Nov/2023:21:19:20 -0400"}
 error: Error al crear usuario: Error: El usuario ya creó el máximo de links permitidos {"longUrl":"https://fontjoy.com/","timestamp":"21/Nov/2023:00:16:37 -0400"}
+error: Hubo un error al eliminar el link JKpZnadtN: Error: El link no pertenece al usuario {"timestamp":"21/Nov/2023:12:47:54 -0400"}

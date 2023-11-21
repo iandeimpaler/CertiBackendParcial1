@@ -10,7 +10,7 @@ export const db = {
     port: process.env.DB_PORT || 3306,
     type: process.env.DB_TYPE || 'mysql',
     username: process.env.DB_USER || 'root',
-    password: process.env.DB_PASS ||  'root',
+    password: process.env.DB_PASS ||  '',
     host: process.env.DB_HOST || 'localhost',
     database: process.env.DB_NAME || 'app',
 }

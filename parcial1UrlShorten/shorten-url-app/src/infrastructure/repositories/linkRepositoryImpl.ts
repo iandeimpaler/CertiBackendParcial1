@@ -35,9 +35,9 @@ export class LinkRepositoryImpl implements LinkRepository {
             numberOfLinks: user.numberOfLinks-1
         })
         const userResponse = AppDataSource.getRepository(UserEntity).merge(user, updatedUser);
-        logger.debug(`Respuesta de DB userResponse: ${JSON.stringify(userResponse)}`);
+        logger.debug(`Respuesta de DB linkResponse: ${JSON.stringify(userResponse)}`);
         const newUser = await AppDataSource.getRepository(UserEntity).save(user);
-        logger.debug(`Respuesta de DB newUser: ${JSON.stringify(newUser)}`);
+        logger.debug(`Respuesta de DB newLink: ${JSON.stringify(newUser)}`);
 
         const linkEntity = await AppDataSource.getRepository(LinkEntity).delete({ id });
         logger.debug(`Respuesta de DB linkEntity:${JSON.stringify(linkEntity)}`);

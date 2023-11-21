@@ -359,3 +359,52 @@ info: ::1 - - [21/Nov/2023:04:16:23 +0000] "POST /api/links/ HTTP/1.1" 201 164 "
 info: En find by id user repository {"timestamp":"21/Nov/2023:00:16:37 -0400"}
 error: Error al crear usuario: Error: El usuario ya creó el máximo de links permitidos {"longUrl":"https://fontjoy.com/","timestamp":"21/Nov/2023:00:16:37 -0400"}
 info: ::1 - - [21/Nov/2023:04:16:37 +0000] "POST /api/links/ HTTP/1.1" 500 50 "-" "PostmanRuntime/7.35.0" {"timestamp":"21/Nov/2023:00:16:37 -0400"}
+info: Dentro de create user controller {"timestamp":"21/Nov/2023:12:22:28 -0400"}
+info: En create user repository {"timestamp":"21/Nov/2023:12:22:28 -0400"}
+info: ::1 - - [21/Nov/2023:16:22:28 +0000] "POST /api/users/ HTTP/1.1" 201 108 "-" "PostmanRuntime/7.35.0" {"timestamp":"21/Nov/2023:12:22:28 -0400"}
+info: En update user repository {"timestamp":"21/Nov/2023:12:22:46 -0400"}
+info: ::1 - - [21/Nov/2023:16:22:46 +0000] "POST /api/auth/login HTTP/1.1" 200 333 "-" "PostmanRuntime/7.35.0" {"timestamp":"21/Nov/2023:12:22:46 -0400"}
+info: Dentro de user by id controller {"timestamp":"21/Nov/2023:12:23:04 -0400"}
+info: En get user by id service {"timestamp":"21/Nov/2023:12:23:04 -0400"}
+info: En find by id user repository {"timestamp":"21/Nov/2023:12:23:04 -0400"}
+info: ::1 - - [21/Nov/2023:16:23:04 +0000] "GET /api/users/62e76ca6-6836-4416-9692-3f75bbb8912e HTTP/1.1" 200 130 "-" "PostmanRuntime/7.35.0" {"timestamp":"21/Nov/2023:12:23:04 -0400"}
+info: En find by id user repository {"timestamp":"21/Nov/2023:12:44:47 -0400"}
+info: En create link repository {"timestamp":"21/Nov/2023:12:44:47 -0400"}
+info: ::1 - - [21/Nov/2023:16:44:47 +0000] "POST /api/links/ HTTP/1.1" 201 196 "-" "PostmanRuntime/7.35.0" {"timestamp":"21/Nov/2023:12:44:47 -0400"}
+info: Usando cache {"timestamp":"21/Nov/2023:12:45:02 -0400"}
+info: ::1 - - [21/Nov/2023:16:45:02 +0000] "GET /api/links/Lq-FBaU0H HTTP/1.1" 200 196 "-" "PostmanRuntime/7.35.0" {"timestamp":"21/Nov/2023:12:45:02 -0400"}
+info: En find by id link repository {"timestamp":"21/Nov/2023:12:45:16 -0400"}
+info: En delete link repository {"timestamp":"21/Nov/2023:12:45:16 -0400"}
+info: ::1 - - [21/Nov/2023:16:45:16 +0000] "DELETE /api/links/Lq-FBaU0H HTTP/1.1" 202 41 "-" "PostmanRuntime/7.35.0" {"timestamp":"21/Nov/2023:12:45:16 -0400"}
+info: ::1 - - [21/Nov/2023:16:45:46 +0000] "POST /api/users/ HTTP/1.1" 400 220 "-" "PostmanRuntime/7.35.0" {"timestamp":"21/Nov/2023:12:45:46 -0400"}
+info: Dentro de create user controller {"timestamp":"21/Nov/2023:12:46:12 -0400"}
+info: En create user repository {"timestamp":"21/Nov/2023:12:46:12 -0400"}
+info: ::1 - - [21/Nov/2023:16:46:12 +0000] "POST /api/users/ HTTP/1.1" 201 105 "-" "PostmanRuntime/7.35.0" {"timestamp":"21/Nov/2023:12:46:12 -0400"}
+info: En update user repository {"timestamp":"21/Nov/2023:12:46:22 -0400"}
+info: ::1 - - [21/Nov/2023:16:46:22 +0000] "POST /api/auth/login HTTP/1.1" 200 330 "-" "PostmanRuntime/7.35.0" {"timestamp":"21/Nov/2023:12:46:22 -0400"}
+info: En find by id user repository {"timestamp":"21/Nov/2023:12:46:36 -0400"}
+info: En create link repository {"timestamp":"21/Nov/2023:12:46:36 -0400"}
+info: ::1 - - [21/Nov/2023:16:46:36 +0000] "POST /api/links/ HTTP/1.1" 201 196 "-" "PostmanRuntime/7.35.0" {"timestamp":"21/Nov/2023:12:46:36 -0400"}
+info: Usando cache {"timestamp":"21/Nov/2023:12:46:46 -0400"}
+info: ::1 - - [21/Nov/2023:16:46:46 +0000] "GET /api/links/JKpZnadtN HTTP/1.1" 200 196 "-" "PostmanRuntime/7.35.0" {"timestamp":"21/Nov/2023:12:46:46 -0400"}
+info: Dentro de create user controller {"timestamp":"21/Nov/2023:12:47:01 -0400"}
+info: En create user repository {"timestamp":"21/Nov/2023:12:47:01 -0400"}
+info: ::1 - - [21/Nov/2023:16:47:01 +0000] "POST /api/users/ HTTP/1.1" 201 106 "-" "PostmanRuntime/7.35.0" {"timestamp":"21/Nov/2023:12:47:01 -0400"}
+info: En update user repository {"timestamp":"21/Nov/2023:12:47:08 -0400"}
+info: ::1 - - [21/Nov/2023:16:47:08 +0000] "POST /api/auth/login HTTP/1.1" 200 331 "-" "PostmanRuntime/7.35.0" {"timestamp":"21/Nov/2023:12:47:08 -0400"}
+info: Usando cache {"timestamp":"21/Nov/2023:12:47:19 -0400"}
+info: ::1 - - [21/Nov/2023:16:47:19 +0000] "GET /api/links/JKpZnadtN HTTP/1.1" 200 196 "-" "PostmanRuntime/7.35.0" {"timestamp":"21/Nov/2023:12:47:19 -0400"}
+info: En update user repository {"timestamp":"21/Nov/2023:12:47:31 -0400"}
+info: ::1 - - [21/Nov/2023:16:47:31 +0000] "POST /api/auth/login HTTP/1.1" 200 331 "-" "PostmanRuntime/7.35.0" {"timestamp":"21/Nov/2023:12:47:31 -0400"}
+info: En find by id link repository {"timestamp":"21/Nov/2023:12:47:54 -0400"}
+error: Hubo un error al eliminar el link JKpZnadtN: Error: El link no pertenece al usuario {"timestamp":"21/Nov/2023:12:47:54 -0400"}
+info: ::1 - - [21/Nov/2023:16:47:54 +0000] "DELETE /api/links/JKpZnadtN HTTP/1.1" 202 41 "-" "PostmanRuntime/7.35.0" {"timestamp":"21/Nov/2023:12:47:54 -0400"}
+info: Dentro de user by id controller {"timestamp":"21/Nov/2023:12:56:33 -0400"}
+info: Utilizando user cache {"timestamp":"21/Nov/2023:12:56:33 -0400"}
+info: ::1 - - [21/Nov/2023:16:56:33 +0000] "GET /api/users/62e76ca6-6836-4416-9692-3f75bbb8912e HTTP/1.1" 200 130 "-" "PostmanRuntime/7.35.0" {"timestamp":"21/Nov/2023:12:56:33 -0400"}
+info: Dentro de user by id controller {"timestamp":"21/Nov/2023:12:56:34 -0400"}
+info: ::1 - - [21/Nov/2023:16:56:34 +0000] "GET /api/users/62e76ca6-6836-4416-9692-3f75bbb8912e HTTP/1.1" - - "-" "PostmanRuntime/7.35.0" {"timestamp":"21/Nov/2023:12:56:34 -0400"}
+info: Utilizando user cache {"timestamp":"21/Nov/2023:12:56:34 -0400"}
+info: Dentro de user by id controller {"timestamp":"21/Nov/2023:12:56:34 -0400"}
+info: ::1 - - [21/Nov/2023:16:56:35 +0000] "GET /api/users/62e76ca6-6836-4416-9692-3f75bbb8912e HTTP/1.1" - - "-" "PostmanRuntime/7.35.0" {"timestamp":"21/Nov/2023:12:56:35 -0400"}
+info: Utilizando user cache {"timestamp":"21/Nov/2023:12:56:35 -0400"}

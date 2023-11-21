@@ -30,6 +30,7 @@ export class LinkService {
 
         if (!linkObject) {
             const link = await this.linkRepository.findById(id);
+            logger.debug(`Get link service: link regresado por repository ${JSON.stringify(link)}`);
 
             if (!link) {
                 throw new Error(`No existe el link con id: ${id}`);
@@ -40,6 +41,7 @@ export class LinkService {
             return {id: link.id, userId: link.user.id, shortUrl: link.shortUrl, longUrl: link.longUrl};
         } else {
             logger.info("Usando cache");
+            logger.debug(`Get link service: link regresado por cache ${JSON.stringify(linkObject)}`);
             return {id: linkObject.id, userId: linkObject.user.id, shortUrl: linkObject.shortUrl, longUrl: linkObject.longUrl};
         }
     }
@@ -47,13 +49,14 @@ export class LinkService {
     async createLink(link: CreateLinkDTO, id: string): Promise<LinkDTO> {
         const user : User = await this.userRepository.findById(id);
         if(user.numberOfLinks===userLimits.linkNumber){
-            throw new Error("El usuario ya creó el máximo de links permitidos")
+            throw new Error("El link ya creó el máximo de links permitidos")
         }
         const linkModel = new Link({
             longUrl: link.longUrl,
             user: user
         });
         const newLink = await this.linkRepository.createLink(linkModel);
+        logger.debug(`Get link service: link regresado por repository ${JSON.stringify(newLink)}`);
         this.setCache(newLink.id, newLink);
         return {id: newLink.id, userId: newLink.user.id, shortUrl: newLink.shortUrl, longUrl: newLink.longUrl};
     }
@@ -66,6 +69,7 @@ export class LinkService {
         }
 
         const result = await this.linkRepository.deleteLink(id);
+        logger.debug(`Get link service: resultado regresado por repository ${JSON.stringify(result)}`);
         this.setCache(id, new Link({
             id: id,
             longUrl: null,
