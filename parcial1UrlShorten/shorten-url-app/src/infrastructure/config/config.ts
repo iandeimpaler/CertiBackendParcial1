@@ -5,7 +5,6 @@ export const env = {
     port: process.env.PORT || 3000,
     environment: process.env.ENV || 'develop'
 };
-console.log(env);
 
 export const db = {
     port: process.env.DB_PORT || 3306,
@@ -15,7 +14,6 @@ export const db = {
     host: process.env.DB_HOST || 'localhost',
     database: process.env.DB_NAME || 'app',
 }
-console.log(db);
 
 export const lg = {
     level: process.env.LOGGER_LEVEL || 'info'
@@ -25,7 +23,6 @@ export const jwt = {
     secretKey:process.env.JWT_SECRET || 'your_secret_key',
     expirationTime: process.env.JWT_EXPIRATION_TIME
 }
-console.log(jwt);
 
 export const redis_env = {
     url: process.env.REDIS_URL || 'otra_url'
@@ -33,4 +30,8 @@ export const redis_env = {
 
 export const bcrypt_vars = {
     saltSync: Number(process.env.BCRYPT_SALT_SYNC) 
+}
+
+export const userLimits = {
+    linkNumber: Number(process.env.MAX_LINKS)
 }

@@ -7,10 +7,10 @@ export class LinkEntity implements ILinkEntity {
     id!: string;
 
     @Column({ type: 'varchar', unique: true})
-    short_url!: string;
+    shortUrl!: string;
 
-    @Column({ type: 'varchar', unique: true})
-    long_url!: string;
+    @Column({ type: 'varchar'})
+    longUrl!: string;
 
     @Column({ type: 'timestamp' })
     createdAt!: Date;

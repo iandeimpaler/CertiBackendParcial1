@@ -78,10 +78,15 @@ export class UserController {
     }
 
     public async deleteUser(req: Request, res: Response): Promise<void> {
-        logger.info("Dentro de delete user by id controller");
+        try{
+            logger.info("Dentro de delete user by id controller");
         const { id } = req.params;
         const userDto = await this.userService.deleteUser(id);
         logger.debug(`Usuario enviado por userService ${JSON.stringify(userDto)}`)
+        } catch(error){
+            logger.error('Hubo un error al eliminar al usuario '+req.params.id+': '+error)
+        }
+        
         res.status(202).json({ message: 'Usuario eliminado exitosamente' });
     }
 

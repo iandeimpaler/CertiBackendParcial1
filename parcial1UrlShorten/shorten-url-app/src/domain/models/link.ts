@@ -12,8 +12,8 @@ export class Link {
     constructor(linkEntity: Partial<ILinkEntity>) {
         
         this.id = linkEntity.id || this.getShortId();
-        this.shortUrl=linkEntity.short_url || "http://localhost:3000/api/links/"+this.id;
-        this.longUrl=linkEntity.long_url;
+        this.shortUrl=linkEntity.shortUrl || "http://localhost:3000/api/links/"+this.id;
+        this.longUrl=linkEntity.longUrl;
         this.createdAt=linkEntity.createdAt;
         this.user=linkEntity.user;
     }

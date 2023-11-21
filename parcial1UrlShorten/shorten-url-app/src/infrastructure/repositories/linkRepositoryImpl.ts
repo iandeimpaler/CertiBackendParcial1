@@ -14,6 +14,31 @@ import { User } from "../../domain/models/user";
 export class LinkRepositoryImpl implements LinkRepository {
     async deleteLink(id: string): Promise<DeleteResult> {
         logger.info("En delete link repository")
+
+        const linkResponse = await AppDataSource.getRepository(LinkEntity).findOne({
+            where: { id },
+            relations: ['user']
+        });
+        logger.debug(`Respuesta de DB linkEntity:${JSON.stringify(linkResponse)}`);
+        if(!linkResponse){
+            throw new Error("No existe el link con id: "+id)
+        }
+
+        const user = await AppDataSource.getRepository(UserEntity).findOneBy({ id: linkResponse.user.id})
+        logger.debug(`Respuesta de DB user: ${JSON.stringify(user)}`);
+        const updatedUser = new User({
+            id: user.id,
+            email: user.email,
+            password: user.password,
+            createdAt: user.createdAt,
+            lastLogin: user.lastLogin,
+            numberOfLinks: user.numberOfLinks-1
+        })
+        const userResponse = AppDataSource.getRepository(UserEntity).merge(user, updatedUser);
+        logger.debug(`Respuesta de DB userResponse: ${JSON.stringify(userResponse)}`);
+        const newUser = await AppDataSource.getRepository(UserEntity).save(user);
+        logger.debug(`Respuesta de DB newUser: ${JSON.stringify(newUser)}`);
+
         const linkEntity = await AppDataSource.getRepository(LinkEntity).delete({ id });
         logger.debug(`Respuesta de DB linkEntity:${JSON.stringify(linkEntity)}`);
         return linkEntity;
@@ -29,23 +54,14 @@ export class LinkRepositoryImpl implements LinkRepository {
         return linkEntity ? new Link(linkEntity) : null;
     }
 
-    async findByLongUrl(longUrl: string): Promise<Link | null> {
-        const linkRepository = AppDataSource.getRepository(LinkEntity);
-        const link = await linkRepository.findOne({
-            where: { long_url: longUrl },
-            relations: ['user']
-        });
-        return link ? new Link(link) : null;
-    }
-
     async createLink(link: Link): Promise<Link> {
         logger.info("En create link repository");
         
         // TODO: set user values 
         const linkEntity = AppDataSource.getRepository(LinkEntity).create({
             id:link.id,
-            long_url: link.longUrl,
-            short_url: link.shortUrl,
+            longUrl: link.longUrl,
+            shortUrl: link.shortUrl,
             createdAt: link.createdAt || new Date(),
             user: link.user
         });
@@ -67,12 +83,12 @@ export class LinkRepositoryImpl implements LinkRepository {
         const userResponse = AppDataSource.getRepository(UserEntity).merge(user, updatedUser);
         logger.debug(`Respuesta de DB userResponse: ${JSON.stringify(userResponse)}`);
         const newUser = await AppDataSource.getRepository(UserEntity).save(user);
-        logger.debug(`Respuesta de DB newUser: ${JSON.stringify(userResponse)}`);
+        logger.debug(`Respuesta de DB newUser: ${JSON.stringify(newUser)}`);
 
         return new Link({
             id: linkResponse.id,
-            long_url: linkResponse.long_url,
-            short_url: linkResponse.short_url,
+            longUrl: linkResponse.longUrl,
+            shortUrl: linkResponse.shortUrl,
             createdAt: linkResponse.createdAt,
             user: linkResponse.user
         });
