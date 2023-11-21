@@ -1,6 +1,8 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
 import { db } from '../../infrastructure/config/config';
+import { UserEntity } from "../entities/userEntity";
+import { LinkEntity } from "../entities/linkEntity";
 
 export const AppDataSource = new DataSource({
     type: db.type as "mysql" | "mariadb",
@@ -11,7 +13,7 @@ export const AppDataSource = new DataSource({
     database: db.database,
     synchronize: true,
     logging: false,
-    entities: [],
+    entities: [UserEntity, LinkEntity],
     subscribers: [],
     migrations: [],
 });
