@@ -317,3 +317,6 @@ info: En update user service {"timestamp":"20/Nov/2023:21:46:00 -0400"}
 info: En find by id user repository {"timestamp":"20/Nov/2023:21:46:00 -0400"}
 info: En update user repository {"timestamp":"20/Nov/2023:21:46:00 -0400"}
 info: ::1 - - [21/Nov/2023:01:46:00 +0000] "PUT /api/users/1bbc6904-e0ef-40f3-beed-0913d311a492 HTTP/1.1" 201 130 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:21:46:00 -0400"}
+info: Dentro de create user controller {"timestamp":"20/Nov/2023:22:05:29 -0400"}
+info: En create user repository {"timestamp":"20/Nov/2023:22:05:29 -0400"}
+info: ::1 - - [21/Nov/2023:02:05:29 +0000] "POST /api/users/ HTTP/1.1" 201 108 "-" "PostmanRuntime/7.35.0" {"timestamp":"20/Nov/2023:22:05:29 -0400"}

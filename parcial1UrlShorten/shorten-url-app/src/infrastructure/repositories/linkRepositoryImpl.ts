@@ -38,6 +38,7 @@ export class LinkRepositoryImpl implements LinkRepository {
 
     async createLink(link: Link): Promise<Link> {
         logger.info("En create link repository");
+        
         // TODO: set user values 
         const linkEntity = AppDataSource.getRepository(LinkEntity).create({
             id:link.id,

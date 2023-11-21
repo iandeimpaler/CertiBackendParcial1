@@ -10,11 +10,17 @@ export class Link {
     user: IUserEntity;
 
     constructor(linkEntity: Partial<ILinkEntity>) {
-        this.id = linkEntity.id || uuidv4();
-        this.shortUrl=linkEntity.short_url;
+        
+        this.id = linkEntity.id || this.getShortId();
+        this.shortUrl=linkEntity.short_url || "http://localhost:3000/api/links/"+this.id;
         this.longUrl=linkEntity.long_url;
         this.createdAt=linkEntity.createdAt;
         this.user=linkEntity.user;
+    }
+
+    getShortId = () =>{
+        const shortid = require('shortid');
+        return shortid.generate();
     }
 
 }

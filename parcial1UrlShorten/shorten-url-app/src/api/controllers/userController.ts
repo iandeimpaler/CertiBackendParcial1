@@ -3,7 +3,7 @@ import { UserService } from '../../app/services/userService';
 import { CreateUserDTO } from '../../app/dtos/user/create.user.dto';
 import logger from '../../infrastructure/logger/logger';
 import { UpdateUserDTO } from '../../app/dtos/user/update.user.dto';
-import { verifyTokenMiddleware } from '../middleware/user/verifyToken';
+import { verifyTokenMiddleware } from '../middleware/verifyToken';
 import { equal } from 'assert';
 import { verifyDeleteMiddleware } from '../middleware/user/verifyDelete';
 import { InstanceChecker } from 'typeorm';
